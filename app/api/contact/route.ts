@@ -155,6 +155,7 @@ export async function POST(request: Request) {
     }
 
     const subject = `New message from ${name}`;
+    const FROM = process.env.RESEND_FROM || "Souheil Portfolio <onboarding@resend.dev>";
     const html = `
       <div>
         <p><strong>Name:</strong> ${escapeHtml(name)}</p>
@@ -172,7 +173,7 @@ export async function POST(request: Request) {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        from: "Souheil Portfolio <onboarding@resend.dev>",
+        from: FROM,
         to: [TO_EMAIL],
         reply_to: email,
         subject,
