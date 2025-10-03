@@ -25,8 +25,10 @@ export async function POST(request: Request) {
     const RESEND_API_KEY = process.env.RESEND_API_KEY;
     const TO_EMAIL = process.env.CONTACT_TO_EMAIL || "souheil2009@gmail.com";
     if (!RESEND_API_KEY) {
-      // TEMP: bypass email sending to allow UI testing without configuration
-      return NextResponse.json({ ok: true, bypass: true }, { status: 200 });
+      return NextResponse.json(
+        { ok: false, error: "Email service not configured" },
+        { status: 500 }
+      );
     }
 
     const subject = `New message from ${name}`;
