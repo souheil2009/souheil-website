@@ -184,7 +184,7 @@ export default function Home() {
                 </button>
               </form>
               <div className="mt-6 text-sm text-foreground/70">
-                Prefer email? <a className="underline hover:no-underline" href="mailto:contact@souheil.dev">contact@souheil.dev</a>
+                Prefer email? <a className="underline hover:no-underline" href="mailto:souheil2009@gmail.com">souheil2009@gmail.com</a>
               </div>
             </div>
           </div>
