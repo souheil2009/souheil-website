@@ -75,3 +75,19 @@ npm run lint    # run ESLint
 - Replace placeholder contact email and social links in `app/page.tsx`.
 - Add real projects and (optionally) product descriptions/icons.
 - Add a profile image to `public/` and feature it in the Hero.
+
+---
+
+## Vercel deployment & environment variables
+
+1. Push the repository to GitHub (done: `main`).
+2. In Vercel, import the GitHub repo and select the project root.
+3. Add Environment Variables in Project Settings:
+   - `RESEND_API_KEY` – your Resend API key
+   - `CONTACT_TO_EMAIL` – destination email (e.g., `souheil2009@gmail.com`)
+   - `KICKBOX_API_KEY` (optional) – for stronger email validation
+4. Deploy. Vercel will auto-detect Next.js.
+
+Notes:
+- Update the sender in `app/api/contact/route.ts` (the `from` field) after verifying a domain in Resend.
+- For local development, use `.env.local` (ignored by Git). See `ENV.example` for a template.
