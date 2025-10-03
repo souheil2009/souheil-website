@@ -1,4 +1,5 @@
 import Image from "next/image";
+import ContactForm from "./components/ContactForm";
 
 export default function Home() {
   return (
@@ -175,16 +176,14 @@ export default function Home() {
               <h2 className="text-2xl font-semibold tracking-tight">Contact</h2>
             </div>
             <div className="md:col-span-2">
-              <form className="grid gap-4 sm:max-w-lg">
-                <input className="h-11 rounded-md border border-foreground/15 bg-background px-3 outline-none focus:ring-2 focus:ring-foreground/20" placeholder="Your name" />
-                <input type="email" className="h-11 rounded-md border border-foreground/15 bg-background px-3 outline-none focus:ring-2 focus:ring-foreground/20" placeholder="Your email" />
-                <textarea className="min-h-28 rounded-md border border-foreground/15 bg-background px-3 py-2 outline-none focus:ring-2 focus:ring-foreground/20" placeholder="Your message" />
-                <button type="submit" className="inline-flex h-11 items-center justify-center rounded-md bg-foreground text-background px-5 text-sm font-medium hover:opacity-90">
-                  Send
-                </button>
-              </form>
-              <div className="mt-6 text-sm text-foreground/70">
-                Prefer email? <a className="underline hover:no-underline" href="mailto:souheil2009@gmail.com">souheil2009@gmail.com</a>
+              <ContactForm />
+              <div className="mt-6 text-sm text-foreground/70 space-y-1">
+                <p>
+                  Prefer email? <a className="underline hover:no-underline" href="mailto:souheil2009@gmail.com">souheil2009@gmail.com</a>
+                </p>
+                <p>
+                  Prefer WhatsApp? <a className="underline hover:no-underline" href="https://wa.me/33664047982" target="_blank" rel="noreferrer">Chat on WhatsApp</a>
+                </p>
               </div>
             </div>
           </div>
