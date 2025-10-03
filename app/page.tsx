@@ -39,8 +39,14 @@ export default function Home() {
               </a>
             </div>
           </div>
-          <div className="relative aspect-square lg:aspect-[4/3] rounded-2xl overflow-hidden border border-foreground/10 bg-gradient-to-br from-foreground/5 to-transparent">
-            <Image src="/next.svg" alt="Decorative" fill className="object-contain p-8 opacity-70 dark:invert" />
+          <div className="relative aspect-square rounded-full overflow-hidden border border-foreground/10 bg-foreground/5">
+            <Image
+              src="/souheil.jpg"
+              alt="Photo of Souheil Abdelhedi"
+              fill
+              className="object-cover"
+              priority
+            />
           </div>
         </section>
 
